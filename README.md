@@ -17,3 +17,6 @@ output video.
 
 ## Results
 We have obtained the following results on different frames of a video:
+![Alt text](/data/images/Cheetah.png?raw=true "Figure 1: Sample frames extracted from video and the colored output from our model")
+
+
