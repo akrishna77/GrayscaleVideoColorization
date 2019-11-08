@@ -6,17 +6,34 @@ in an effort to restore videos to their original colors. We propose a system tha
 particular: colorizing frames in a video, and optimizing this process across multiple frames. We wish to
 implement this using a pre-trained CNN model with optimizations for performance over video.
 
-## Proposed Solution
-Our initial plan was to build on the approach taken by Zhang et.al. to solve the problem of video
-colorization by:
-- Adaptively clustering similar frames in the video, find a representative frame and generate its color
-map.
-- Using an LSTM network to propagate color information across successive frames within a cluster.
-- Processing individual clusters in parallel and stitching the results together to generate a fully colored
-output video.
+## Running the notebooks
+   Create two virtual environments, to avoid dependency mismatches.
 
-## Results
-We have obtained the following results on different frames of a video:
-![Alt text](data/images/Cheetah.PNG?raw=true "Figure 1: Sample frames extracted from video and the colored output from our model")
+### SceneDetect
+   ```
+   conda create -n sd3.7 python=3.7.4
+   conda activate sd3.7
+   ```
 
+   Install dependencies from `scenedetection/scenedetectenv_reqts.txt`
+   ```
+   pip install -r scenedetection/scenedetectenv_reqts.txt
+   ```
 
+   Run the notebook : `scenedetection/SceneDetect.ipynb`
+ 
+### Caffe-Colorization
+   ```
+   conda create -n cc3.6.3 python=3.6.3
+   conda activate cc3.6
+   ```
+
+   Install dependencies from `colorization/working_colorization_reqts.txt`
+   ```
+   pip install -r colorization/working_colorization_reqts.txt
+   ```
+   Run the notebook : `colorization/Caffe_Colorization_Notebook.ipynb`
+
+## Misc
+
+   If you're having trouble viewing the notebooks, copy the link to the `.ipynb` file into [Jupyter Notebook Viewer](https://nbviewer.jupyter.org/)!
