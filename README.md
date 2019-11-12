@@ -34,6 +34,18 @@ implement this using a pre-trained CNN model with optimizations for performance 
    ```
    Run the notebook : `colorization/Caffe_Colorization_Notebook.ipynb`
 
+### LSTM-Network
+   ```
+   conda create -n nn_env python=3.6.3
+   conda activate nn_env
+   ```
+
+   Install dependencies from `network/requirements.txt`
+   ```
+   pip install -r network/requirements.txt
+   ```
+   Run the notebook on Google Colab : `network/LSTMNetwork.ipynb`
+
 ## Misc
 
    If you're having trouble viewing the notebooks, copy the link to the `.ipynb` file into [Jupyter Notebook Viewer](https://nbviewer.jupyter.org/)!
