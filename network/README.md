@@ -22,10 +22,10 @@ The architecture has four basic parts,
 * An LSTM to extract temporal features within frames
 
 ### Architectue Diagram
-![Architecture Diagram](res/flowchroma-architecture.png)
+![Architecture Diagram](diagrams/flowchroma-architecture.png)
 
 ### Fusion Layer
-![Fusion Layer](res/fusion-layer.png)
+![Fusion Layer](diagrams/fusion-layer.png)
 The figure provides a better understanding of the model’s architecture. We take the final CNN outputs from the CNN encoder and drive it through a global average pooling 2d function, then the function’s output is used as inputs for the LSTM layer. LSTM learns how to keep the temporal coherence within subsequent frames. Outputs from the global feature extractor and the LSTM are repeated, reshaped and stacked after the output of CNN encoder, we call the resultant output as fusion layer. After the fusion layer, a time distributed decoder is added, mainly for colourization purposes.
 
 As initial inputs to the model, we use scaled luminance layers of frames and each frame is stretched or shrunk as needed, but the aspect ratio is preserved by adding a white padding where needed. For the high-level feature extractor, luminance layer is repeated thrice. As model outputs, we get a* and b* combinations of frames.
